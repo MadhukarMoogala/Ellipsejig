@@ -1,4 +1,4 @@
-# MultiTargeting AutoCAD .NET Plugin to NET 4.8 and NET 8.0
+# Multi-targeting AutoCAD .NET Plugin for .NET 4.8 and .NET 8.0
 
 This application implements a command called `ellipsejig`. It will help you 
 create an ellipse from scratch by doing a jig. The user is first asked to
@@ -57,7 +57,7 @@ The Project structure to accomodate multi frameworks.
 #### Steps To Build
 
 ```bashag-0-1i1mltncuag-1-1i1mltncu
-git clone
+git clone https://github.com/MadhukarMoogala/Ellipsejig.git
 cd EllipseJig
 ```
 
@@ -73,12 +73,12 @@ cd EllipseJig
   dotnet build Ellipsejig.csproj -c ACAD2025 -a x64
   ```
 
-Or, you build through Visual Studio UI.
+Or, you can build through Visual Studio UI.
 
 After cloning the project, open the EllipseJig project in Visual Studio 2022, make the ACAD2024 or ACAD2025 configuration as default to build respective version projects.
 
 
-
+![image](https://github.com/MadhukarMoogala/Ellipsejig/assets/6602398/53f0d27d-0a3a-4b6d-a834-d69e6729c37f)
 
 
 ## Written by
