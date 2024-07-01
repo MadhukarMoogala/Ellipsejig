@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>JigSample</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JigSample</RootNamespace>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+	<Platforms>x64</Platforms>
+    <Configurations>ACAD2024;ACAD2025</Configurations>
+	<BaseOutputPath>bin</BaseOutputPath>    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'ACAD2025'">
+    <TargetFramework>net8.0-windows</TargetFramework>
+      <!-- uncomment to use Forms or WPF-->
+      <!--<UseWindowsForms>true</UseWindowsForms>
+      <UseWPF>true</UseWPF>-->
+	<AssemblySearchPaths>D:\ArxSdks\Arx2025\inc\;$(AssemblySearchPaths)</AssemblySearchPaths>	
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'ACAD2024'">
+    <TargetFramework>net48</TargetFramework>
+	<AssemblySearchPaths>D:\ArxSdks\Arx2024\inc\;$(AssemblySearchPaths)</AssemblySearchPaths>
+  </PropertyGroup>
+    <ItemGroup Condition="'$(Configuration)' == 'ACAD2025'">
+        <FrameworkReference Include="Microsoft.WindowsDesktop.App"/>
+    </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AcDbMgd">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="accoremgd">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
